@@ -1,0 +1,26 @@
+{
+  "name": "mongo-performance",
+  "version": "1.0.0",
+  "description": "Testing mongodb performance working with thousands of records",
+  "main": "index.js",
+  "scripts": {
+  },
+  "keywords": [
+    "mongodb",
+    "performance"
+  ],
+  "author": "Dmytro Harazdovskyi",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "16.0.2",
+    "lodash": "^4.17.21",
+    "minimist": "^1.2.6",
+    "mongodb": "4.9.1",
+    "object-sizeof": "^1.6.3",
+    "radash": "^7.1.0",
+    "stream-json": "^1.7.4"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

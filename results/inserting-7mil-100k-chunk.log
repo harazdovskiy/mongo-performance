@@ -1,0 +1,285 @@
+> mongo-performance@1.0.0 insert-7mil-m30
+> node ./insert/insert-7mil-m30.js
+
+Connected successfully to server
+arrayToInsert size - 354.85045185293717 mb
+Inserting time - 100000: 45.277s
+--------------
+
+arrayToInsert size - 355.2693285024648 mb
+Inserting time - 200000: 25.333s
+--------------
+
+arrayToInsert size - 356.35707035837044 mb
+Inserting time - 300000: 23.103s
+--------------
+
+arrayToInsert size - 357.69448033655476 mb
+Inserting time - 400000: 23.688s
+--------------
+
+arrayToInsert size - 359.0605634868442 mb
+Inserting time - 500000: 30.609s
+--------------
+
+arrayToInsert size - 359.2550691791055 mb
+Inserting time - 600000: 28.581s
+--------------
+
+arrayToInsert size - 369.7053064926552 mb
+Inserting time - 700000: 29.397s
+--------------
+
+arrayToInsert size - 354.82240810588326 mb
+Inserting time - 800000: 26.488s
+--------------
+
+arrayToInsert size - 354.4360498433189 mb
+Inserting time - 900000: 27.478s
+--------------
+
+arrayToInsert size - 355.68956699892146 mb
+Inserting time - 1000000: 23.731s
+--------------
+
+arrayToInsert size - 357.7867120873906 mb
+Inserting time - 1100000: 18.548s
+--------------
+
+arrayToInsert size - 357.07334080784693 mb
+Inserting time - 1200000: 21.483s
+--------------
+
+arrayToInsert size - 357.72054807041764 mb
+Inserting time - 1300000: 23.225s
+--------------
+
+arrayToInsert size - 369.65483804764085 mb
+Inserting time - 1400000: 25.082s
+--------------
+
+arrayToInsert size - 356.69956341691204 mb
+Inserting time - 1500000: 22.425s
+--------------
+
+arrayToInsert size - 354.19682636219284 mb
+Inserting time - 1600000: 23.569s
+--------------
+
+arrayToInsert size - 354.44371357015444 mb
+Inserting time - 1700000: 23.183s
+--------------
+
+arrayToInsert size - 357.56467381751094 mb
+Inserting time - 1800000: 27.937s
+--------------
+
+arrayToInsert size - 356.02123776127974 mb
+Inserting time - 1900000: 30.027s
+--------------
+
+arrayToInsert size - 359.6972936833354 mb
+Inserting time - 2000000: 32.155s
+--------------
+
+arrayToInsert size - 364.7633604443693 mb
+Inserting time - 2100000: 31.252s
+--------------
+
+arrayToInsert size - 362.3349146191781 mb
+Inserting time - 2200000: 29.409s
+--------------
+
+arrayToInsert size - 354.5507577905285 mb
+Inserting time - 2300000: 30.695s
+--------------
+
+arrayToInsert size - 356.19640675302867 mb
+Inserting time - 2400000: 26.933s
+--------------
+
+arrayToInsert size - 356.9986280542695 mb
+Inserting time - 2500000: 35.734s
+--------------
+
+arrayToInsert size - 358.893708627817 mb
+Inserting time - 2600000: 32.253s
+--------------
+
+arrayToInsert size - 363.78523963685046 mb
+Inserting time - 2700000: 28.159s
+--------------
+
+arrayToInsert size - 364.4026884459399 mb
+Inserting time - 2800000: 28.284s
+--------------
+
+arrayToInsert size - 357.2856077306439 mb
+Inserting time - 2900000: 31.009s
+--------------
+
+arrayToInsert size - 355.48520412888865 mb
+Inserting time - 3000000: 31.941s
+--------------
+
+arrayToInsert size - 355.8856958448754 mb
+Inserting time - 3100000: 27.108s
+--------------
+
+arrayToInsert size - 359.5447954375215 mb
+Inserting time - 3200000: 23.491s
+--------------
+
+arrayToInsert size - 356.85197583203717 mb
+Inserting time - 3300000: 21.582s
+--------------
+
+arrayToInsert size - 362.3430513684764 mb
+Inserting time - 3400000: 18.701s
+--------------
+
+arrayToInsert size - 368.8701014113829 mb
+Inserting time - 3500000: 19.260s
+--------------
+
+arrayToInsert size - 353.5827058764802 mb
+Inserting time - 3600000: 24.182s
+--------------
+
+arrayToInsert size - 354.0788568488088 mb
+Inserting time - 3700000: 23.543s
+--------------
+
+arrayToInsert size - 355.9255918563783 mb
+Inserting time - 3800000: 25.863s
+--------------
+
+arrayToInsert size - 357.2137731661642 mb
+Inserting time - 3900000: 27.094s
+--------------
+
+arrayToInsert size - 358.14732305066354 mb
+Inserting time - 4000000: 23.901s
+--------------
+
+arrayToInsert size - 362.4624342272026 mb
+Inserting time - 4100000: 22.783s
+--------------
+
+arrayToInsert size - 365.7666868641658 mb
+Inserting time - 4200000: 22.543s
+--------------
+
+arrayToInsert size - 354.74597492383253 mb
+Inserting time - 4300000: 21.754s
+--------------
+
+arrayToInsert size - 354.9915937449485 mb
+Inserting time - 4400000: 20.908s
+--------------
+
+arrayToInsert size - 357.49040356881795 mb
+Inserting time - 4500000: 30.042s
+--------------
+
+arrayToInsert size - 356.9654802422549 mb
+Inserting time - 4600000: 22.855s
+--------------
+
+arrayToInsert size - 359.03569356792724 mb
+Inserting time - 4700000: 21.553s
+--------------
+
+arrayToInsert size - 360.92911093346066 mb
+Inserting time - 4800000: 27.551s
+--------------
+
+arrayToInsert size - 370.12684198618706 mb
+Inserting time - 4900000: 26.810s
+--------------
+
+arrayToInsert size - 353.34856357213107 mb
+Inserting time - 5000000: 19.353s
+--------------
+
+arrayToInsert size - 353.39306010855364 mb
+Inserting time - 5100000: 21.100s
+--------------
+
+arrayToInsert size - 356.3413385467877 mb
+Inserting time - 5200000: 23.820s
+--------------
+
+arrayToInsert size - 354.81069889258225 mb
+Inserting time - 5300000: 20.500s
+--------------
+
+arrayToInsert size - 356.72250500635397 mb
+Inserting time - 5400000: 22.609s
+--------------
+
+arrayToInsert size - 360.6632284403933 mb
+Inserting time - 5500000: 21.720s
+--------------
+
+arrayToInsert size - 368.89333482516673 mb
+Inserting time - 5600000: 26.461s
+--------------
+
+arrayToInsert size - 353.8154310207898 mb
+Inserting time - 5700000: 26.817s
+--------------
+
+arrayToInsert size - 353.96698703637554 mb
+Inserting time - 5800000: 27.297s
+--------------
+
+arrayToInsert size - 356.1000932761032 mb
+Inserting time - 5900000: 23.061s
+--------------
+
+arrayToInsert size - 356.22524967916274 mb
+Inserting time - 6000000: 27.144s
+--------------
+
+arrayToInsert size - 357.85697118189364 mb
+Inserting time - 6100000: 29.122s
+--------------
+
+arrayToInsert size - 363.5918058745248 mb
+Inserting time - 6200000: 25.493s
+--------------
+
+arrayToInsert size - 366.7005857934663 mb
+Inserting time - 6300000: 23.373s
+--------------
+
+arrayToInsert size - 353.2450250585573 mb
+Inserting time - 6400000: 22.623s
+--------------
+
+arrayToInsert size - 353.86883869005845 mb
+Inserting time - 6500000: 24.044s
+--------------
+
+arrayToInsert size - 355.2608732259437 mb
+Inserting time - 6600000: 26.616s
+--------------
+
+arrayToInsert size - 357.06675282564436 mb
+Inserting time - 6700000: 25.401s
+--------------
+
+arrayToInsert size - 357.2137560000264 mb
+Inserting time - 6800000: 21.224s
+--------------
+
+arrayToInsert size - 362.7213682491744 mb
+Inserting time - 6900000: 19.990s
+--------------
+
+Operation took -  1965.829  seconds // ~33minutes
+
+
+Process finished with exit code 0
+

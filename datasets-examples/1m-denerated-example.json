@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Dominic King",
+    "text": "elit sed consequat auctor, nunc nulla vulputate dui, nec tempus",
+    "numberrange": 3,
+    "alphanumeric": "FAK07RDY6GL",
+    "list": 3,
+    "country": "Germany",
+    "region": "Southwestern Tagalog Region",
+    "postalZip": "88127",
+    "email": "adipiscing@hotmail.couk"
+  },
+  {
+    "name": "Geoffrey Meyers",
+    "text": "mi lorem, vehicula et, rutrum eu, ultrices sit amet, risus.",
+    "numberrange": 5,
+    "alphanumeric": "DAS80XJR3HC",
+    "list": 3,
+    "country": "Spain",
+    "region": "Ilocos Region",
+    "postalZip": "934568",
+    "email": "ante.blandit@yahoo.ca"
+  },
+  {
+    "name": "Jacob Payne",
+    "text": "Duis at lacus. Quisque purus sapien, gravida non, sollicitudin a,",
+    "numberrange": 9,
+    "alphanumeric": "OXC56RHV1MO",
+    "list": 1,
+    "country": "South Africa",
+    "region": "Alsace",
+    "postalZip": "31751",
+    "email": "morbi@yahoo.ca"
+  }
+]

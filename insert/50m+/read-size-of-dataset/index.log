@@ -1,0 +1,14 @@
+//node index.js --from=0 --to=20
+// All folders - 51936
+
+//node index.js --from=1 --to=5000 10 parallel reads - Reviews 6 00 1517 Took 38s to read
+
+//node index.js --from=1 --to=5000 5 parallel - Reviews 6 00 1517 Took 37s to read
+
+//node index.js --from=1 --to=5000 20 parallel - Reviews 6 00 1517 Took  38.268s to read
+
+//node index.js --from=1 --to=5000 1 parallel - Reviews 6 00 1517 Took  61s to read
+
+//node index.js --from=1 --to=1000 5 parallel - Reviews 9 979 105  Operation took -  66.232  seconds
+
+//node index.js --from=1 --to=52000 (MAX) 5 parallel - Reviews 63 199 604 Operation took -  460.885  seconds
