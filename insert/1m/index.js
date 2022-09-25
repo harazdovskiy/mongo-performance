@@ -1,11 +1,13 @@
 const dotenv = require('dotenv');
 dotenv.config()
 const {promises: fs} = require('fs');
+const path = require('path');
 const {MongoClient, ServerApiVersion} = require('mongodb');
 
 const DB_NAME = 'performance1m';
+const COLLECTION_NAME = '1m-collection';
 
-const PATH_1MIL = '../../dataset/1m-generated.json';
+const PATH_1MIL = path.resolve('../dataset/1m-generated.json');
 
 (async () => {
     try {
