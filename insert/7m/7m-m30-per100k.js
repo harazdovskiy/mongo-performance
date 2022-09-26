@@ -6,15 +6,13 @@ const objectSize = require('object-sizeof');
 const radash = require('radash');
 const JsonlParser = require('stream-json/jsonl/Parser');
 const {MongoClient, ServerApiVersion} = require("mongodb");
-const jsonlParser = new JsonlParser();
+const parser = new JsonlParser();
 
 const PATH_7MIL = '../dataset/7m-yelp-reviews.json';
-
 const COLLECTION_NAME = '7mil-collection';
 const DB_NAME = 'performance7m';
 
 const BYTE_IN_MB = 0.00000095367432;
-
 
 (async () => {
     let arrayToInsert = [];
@@ -22,7 +20,7 @@ const BYTE_IN_MB = 0.00000095367432;
     let started = Date.now()
     const col = await getCollection();
 
-    const pipeline = fs.createReadStream(PATH_7MIL).pipe(jsonlParser);
+    const pipeline = fs.createReadStream(PATH_7MIL).pipe(parser);
 
     pipeline.on('data', async data => {
         objectCounter++;

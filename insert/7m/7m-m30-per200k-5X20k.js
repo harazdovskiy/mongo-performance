@@ -2,12 +2,12 @@ const dotenv = require('dotenv');
 dotenv.config()
 
 const fs = require('fs');
+const {MongoClient, ServerApiVersion} = require("mongodb");
+const JsonlParser = require('stream-json/jsonl/Parser');
+const parser = new JsonlParser();
 const objectSize = require('object-sizeof');
 const radash = require('radash');
 const lodash = require('lodash');
-const JsonlParser = require('stream-json/jsonl/Parser');
-const jsonlParser = new JsonlParser();
-const {MongoClient, ServerApiVersion} = require("mongodb");
 
 const PATH_7MIL = '../dataset/7m-yelp-reviews.json';
 const COLLECTION_NAME = '7mil-collection-parallel';
@@ -25,7 +25,7 @@ const BYTE_IN_MB = 0.00000095367432;
     let started = Date.now()
     const col = await getCollection();
 
-    const pipeline = fs.createReadStream(PATH_7MIL).pipe(jsonlParser);
+    const pipeline = fs.createReadStream(PATH_7MIL).pipe(parser);
     pipeline.on('data', async data => {
         objectCounter++;
         arrayToInsert.push(data.value)

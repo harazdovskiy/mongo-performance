@@ -4,10 +4,11 @@ const {promises: fs} = require('fs');
 const path = require('path');
 const {MongoClient, ServerApiVersion} = require('mongodb');
 
-const DB_NAME = 'performance1m';
+const DB_NAME = 'performance-1m';
 const COLLECTION_NAME = '1m-collection';
 
-const PATH_1MIL = path.resolve('../dataset/1m-generated.json');
+// const PATH_1MIL = path.resolve('../dataset/1m-generated.json');
+const PATH_1MIL = path.resolve('../dataset/7m-yelp-reviews.json');
 
 (async () => {
     try {
@@ -15,7 +16,8 @@ const PATH_1MIL = path.resolve('../dataset/1m-generated.json');
         const records = JSON.parse(await fs.readFile(PATH_1MIL));
         console.timeEnd('Reading json')
 
-        const col = await getCollection(process.env.MONGO_CLUSTER_SHARED);
+        // const col = await getCollection(process.env.MONGO_CLUSTER_SHARED);
+        const col = await getCollection(process.env.MONGO_CLUSTER_M30);
 
         console.log('Started insertion process successfully to server');
         console.time('Inserting records')
