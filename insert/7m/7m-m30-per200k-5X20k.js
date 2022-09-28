@@ -36,10 +36,10 @@ const BYTE_IN_MB = 0.00000095367432;
             const chunks = lodash.chunk(arrayToInsert, PARALLEL_EXECUTION_CHUNK);
             await radash.parallel(PARALLEL_EXECUTIONS, chunks, async (chunk) => {
                 const now = Date.now()
-                console.log(`id: ${now}:  chunks size -`, objectSize(chunk) * BYTE_IN_MB, 'mb');
-                console.time(`id: ${now}:  Inserting time`);
+                const stats = `size ${(objectSize(chunk) * BYTE_IN_MB).toFixed(3)} mb, records: ${chunk.length}`
+                console.time(`id: ${now} - stats: ${stats} - took: `);
                 await col.insertMany(chunk);
-                console.timeEnd(`id: ${now}:  Inserting time`);
+                console.timeEnd(`id: ${now} - stats: ${stats} - took: `);
             })
             console.log('--------------\n');
             arrayToInsert = []
