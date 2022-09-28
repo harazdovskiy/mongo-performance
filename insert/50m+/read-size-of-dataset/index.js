@@ -2,7 +2,7 @@ const fs = require('fs');
 const {from = 0, to = 1} = require('minimist')(process.argv.slice(2));
 const radash = require('radash');
 
-const BASE_PATH = '../../../dataset/reviews';
+const BASE_PATH = '../dataset/reviews';
 
 (async () => {
     let started = Date.now()
