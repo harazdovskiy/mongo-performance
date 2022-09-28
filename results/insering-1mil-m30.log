@@ -1,7 +1,0 @@
-> mongo-performance@1.0.0 insert-1mil-m30
-> node ./insert/
-
-Reading json: 3.071s
-Connected successfully to server
-Started insertion process successfully to server
-Inserting records: 2:45.963 (m:ss.mmm)

@@ -1,0 +1,33 @@
+{
+  "success": 1,
+  "query_summary": {
+    "num_reviews": 100
+  },
+  "reviews": [
+    {
+      "recommendationid": "96150189",
+      "author": {
+        "steamid": "76561198838108725",
+        "num_games_owned": 62,
+        "num_reviews": 16,
+        "playtime_forever": 364,
+        "playtime_last_two_weeks": 0,
+        "playtime_at_review": 68,
+        "last_played": 1627589277
+      },
+      "language": "spanish",
+      "review": "oui shephard mon amour",
+      "timestamp_created": 1626898525,
+      "timestamp_updated": 1633023708,
+      "voted_up": true,
+      "votes_up": 1,
+      "votes_funny": 0,
+      "weighted_vote_score": "0.497925341129302979",
+      "comment_count": 0,
+      "steam_purchase": true,
+      "received_for_free": false,
+      "written_during_early_access": false
+    }
+  ],
+  "cursor": "AoJ4oqvF0PoCcu397AI="
+}
