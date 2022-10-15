@@ -72,7 +72,7 @@ const LOG_PATH_EVERY = 1_000_000;
 })()
 
 async function getCollection() {
-    const client = new MongoClient(process.env.MONGO_CLUSTER_SHARED, {
+    const client = new MongoClient(process.env.MONGO_CLUSTER_M30, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
         serverApi: ServerApiVersion.v1

@@ -1,0 +1,112 @@
+[{
+    "_id" : "english",
+    "count" : 28247901.0
+},
+{
+    "_id" : "schinese",
+    "count" : 10589453.0
+},
+{
+    "_id" : "russian",
+    "count" : 7208355.0
+},
+{
+    "_id" : "brazilian",
+    "count" : 2644543.0
+},
+{
+    "_id" : "spanish",
+    "count" : 2463678.0
+},
+{
+    "_id" : "german",
+    "count" : 2052290.0
+},
+{
+    "_id" : "turkish",
+    "count" : 2036677.0
+},
+{
+    "_id" : "koreana",
+    "count" : 1445616.0
+},
+{
+    "_id" : "french",
+    "count" : 1399185.0
+},
+{
+    "_id" : "polish",
+    "count" : 1341264.0
+},
+{
+    "_id" : "tchinese",
+    "count" : 643961.0
+},
+{
+    "_id" : "czech",
+    "count" : 370956.0
+},
+{
+    "_id" : "italian",
+    "count" : 348743.0
+},
+{
+    "_id" : "japanese",
+    "count" : 309402.0
+},
+{
+    "_id" : "latam",
+    "count" : 278111.0
+},
+{
+    "_id" : "thai",
+    "count" : 277266.0
+},
+{
+    "_id" : "swedish",
+    "count" : 246512.0
+},
+{
+    "_id" : "portuguese",
+    "count" : 241709.0
+},
+{
+    "_id" : "dutch",
+    "count" : 202342.0
+},
+{
+    "_id" : "finnish",
+    "count" : 166827.0
+},
+{
+    "_id" : "danish",
+    "count" : 158252.0
+},
+{
+    "_id" : "hungarian",
+    "count" : 157412.0
+},
+{
+    "_id" : "norwegian",
+    "count" : 107774.0
+},
+{
+    "_id" : "romanian",
+    "count" : 86428.0
+},
+{
+    "_id" : "ukrainian",
+    "count" : 85895.0
+},
+{
+    "_id" : "greek",
+    "count" : 39893.0
+},
+{
+    "_id" : "bulgarian",
+    "count" : 28014.0
+},
+{
+    "_id" : "vietnamese",
+    "count" : 21145.0
+}]

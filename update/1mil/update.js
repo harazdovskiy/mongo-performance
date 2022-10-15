@@ -2,17 +2,17 @@ const dotenv = require('dotenv');
 dotenv.config()
 const {MongoClient, ServerApiVersion} = require('mongodb');
 
-const DB_NAME = 'performance1m';
-const COLLECTION_NAME = 'one-million';
+const DB_NAME = 'performance63m';
+const COLLECTION_NAME = '63mil-collection';
 
 (async () => {
     try {
 
         const col = await getCollection();
 
-        console.time('Requesting 1mil data');
-        const res = await col.updateMany({}, {$set: {addedNumber: 1}});
-        console.timeEnd('Requesting 1mil data');
+        console.time('Updating 1,5mil data');
+        const res = await col.updateMany({language: 'polish'}, {$unset: {isRussian: true}});
+        console.timeEnd('Updating 1,5mil data');
 
         console.log(res)
 
