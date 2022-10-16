@@ -10,9 +10,9 @@ const COLLECTION_NAME = '63mil-collection';
 
         const col = await getCollection();
 
-        console.time('Updating 1,5mil data');
-        const res = await col.updateMany({language: 'polish'}, {$unset: {isRussian: true}});
-        console.timeEnd('Updating 1,5mil data');
+        console.time('Updating 1,3mil data');
+        const res = await col.updateMany({language: 'polish'}, {$unset: {isPolish: true}});
+        console.timeEnd('Updating 1,3mil data');
 
         console.log(res)
 
