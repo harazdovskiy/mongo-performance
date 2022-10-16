@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "Testing mongodb performance working with thousands of records",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "keywords": [
     "mongodb",
     "performance"
