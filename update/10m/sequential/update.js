@@ -4,13 +4,14 @@ const {MongoClient, ServerApiVersion} = require('mongodb');
 
 const DB_NAME = 'performance63m';
 const COLLECTION_NAME = '63mil-collection';
-const CHUNK = 5;
+const CHUNK = 20_000;
 
 (async () => {
     try {
+        console.time('Script took');
 
         const col = await getCollection();
-        const query = {language: 'schinese', popularity: {$exists: false}};
+        const query = {language: 'schinese'};
         console.time('Cursor');
         const cursor = col
             .find(
@@ -19,7 +20,10 @@ const CHUNK = 5;
             )
         console.timeEnd('Cursor');
 
+        console.log('Calculating cursor size');
+        console.time('docs count');
         const totalDocs = await col.countDocuments(query);
+        console.timeEnd('docs count');
 
         console.log({totalDocs})
         let objectCounter = 0;
@@ -28,21 +32,23 @@ const CHUNK = 5;
         cursorStream.on("data", async doc => {
             objectCounter++;
             operations.push(getBulkOperations(doc))
-            if (operations.length % CHUNK === 0) {
+            if (objectCounter % CHUNK === 0) {
                 cursorStream.pause();
-                console.log(operations.length)
                 await col.bulkWrite(operations);
                 operations = []
                 console.log('objectCounter: ', objectCounter)
                 cursorStream.resume()
             }
         }).on('end', () => {
+            console.timeEnd('Script took');
             process.exit();
         }).on('error', (e) => {
+            console.timeEnd('Script took');
             console.error(e)
             process.exit(1);
         });
     } catch (e) {
+        console.timeEnd('Script took');
         console.error(e);
     }
 })();
@@ -61,8 +67,7 @@ function getBulkOperations(record) {
 }
 
 async function getCollection() {
-    const client = new MongoClient(process.env.MONGO_CLUSTER_SHARED, {
-        // const client = new MongoClient(process.env.MONGO_CLUSTER_M30, {
+    const client = new MongoClient(process.env.MONGO_CLUSTER_M30, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
         serverApi: ServerApiVersion.v1
