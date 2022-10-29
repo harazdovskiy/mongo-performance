@@ -2,6 +2,7 @@ const dotenv = require('dotenv');
 dotenv.config()
 const {MongoClient, ServerApiVersion} = require('mongodb');
 const {chunk} = require("lodash");
+const {from = 0, to = 500_000} = require('minimist')(process.argv.slice(2));
 
 const DB_NAME = 'performance63m';
 const COLLECTION_NAME = '63mil-collection';
@@ -14,13 +15,13 @@ const BULK_CHUNK_SIZE = 20_000;
         console.time('Script took');
 
         const col = await getCollection();
-        const query = {language: 'schinese'};
+
         console.time('Cursor');
-        const cursor = col
-            .find(
-                query,
-                {votes_up: 1, votes_funny: 1, comment_count: 1}
-            )
+        const cursor = col.find({}, {
+            votes_up: 1,
+            votes_funny: 1,
+            comment_count: 1
+        }).batchSize(1000).skip(from).limit(to);
         console.timeEnd('Cursor');
 
         let objectCounter = 0;
@@ -32,10 +33,10 @@ const BULK_CHUNK_SIZE = 20_000;
             operations.push(getBulkOperations(doc))
             if (objectCounter % CHUNK === 0) {
                 cursorStream.pause();
-                const bulkChunks = chunk(operations, BULK_CHUNK_SIZE)
-                console.time('Parallel sequential took');
-                await radash.parallel(5, bulkChunks, (operations) => col.bulkWrite(operations))
-                console.timeEnd('Parallel sequential took');
+                    const bulkChunks = chunk(operations, BULK_CHUNK_SIZE)
+                    console.time('Parallel sequential took');
+                    await radash.parallel(5, bulkChunks, (operations) => col.bulkWrite(operations))
+                    console.timeEnd('Parallel sequential took');
                 operations = []
                 console.log('Done with  ', objectCounter, 'records')
                 cursorStream.resume()
@@ -60,7 +61,7 @@ function getBulkOperations(record) {
             filter: {_id: record._id},
             update: {
                 $set: {
-                    'parallel_popularity': record.votes_up + record.votes_funny + record.comment_count
+                    'super_popularity': record.votes_up + record.votes_funny + record.comment_count
                 }
             }
         }
@@ -72,7 +73,7 @@ async function getCollection() {
         useNewUrlParser: true,
         useUnifiedTopology: true,
         serverApi: ServerApiVersion.v1,
-        readPreference: 'secondary',
+        readPreference: 'secondary'
     });
     await client.connect();
 
